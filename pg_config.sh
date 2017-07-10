@@ -1,5 +1,5 @@
 apt-get -qqy update
-apt-get -qqy upgrade
+DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 apt-get -qqy install postgresql python-psycopg2
 apt-get -qqy install python-sqlalchemy
 apt-get -qqy install python-pip
